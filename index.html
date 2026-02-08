@@ -1,19 +1,132 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blaede Cantina</title>
     <meta name="fediverse:creator" content="@cassidy@blaede.family" />
-    <meta name="author" content="Cassidy James Blaede">
+    <meta name="author" content="Cassidy James Blaede" />
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <style>
       :root {
-        color-scheme: light dark;
+        color-scheme: dark;
+        font-family: Inter, sans-serif;
+        font-feature-settings:
+          'cv05' 1, /* Lower-case "L" with tail */
+          'cv06' 1, /* Simplified "u" */
+          'cv11' 1, /* Single-story "a" */
+          'cv12' 1, /* Compact "f" */
+          'cv13' 1, /* Compact "t" */
+          'ss01' 1, /* Alternate digits */
+          'ss03' 1, /* Round quotes & comma */
+          'frac' 1, /* Fractions */
+          'dlig' 1, /* Discretionary ligatures */
+          'liga' 1, 'calt' 1; /* Fix for Chrome */
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.33;
+
+        --bg: black;
+        --fg: white;
+        --accent: #1cfbfd;
+      }
+
+      @supports (font-variation-settings: normal) {
+        :root { font-family: InterVariable, sans-serif; }
+      }
+
+      * {
+        text-wrap: balance;
+      }
+
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin-inline: auto;
+        max-width: 24rem;
+        padding: 1rem;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Spectre";
+        font-weight: 500;
+        line-height: 0.8;
+        margin-block: 2em 0em;
+      }
+
+      h1 {
+        font-size: 4rem;
+        line-height: 0.67;
+      }
+
+      h2 {
+        border-top: 0.125em solid;
+        color: var(--accent);
+        padding-top: 0.25em;
+      }
+
+      p {
+        margin-block: 0.5em;
+      }
+
+      h1 + p {
+        color: var(--accent);
+        font-family: "Spectre";
+        margin: 0;
+        opacity: 0.5;
+      }
+
+      strong {
+        color: var(--accent);
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Spectre";
+        src:
+          local("Spectre"),
+          url("fonts/spectre/spectre.otf") format("opentype"),
+          url("fonts/spectre/spectre.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-family: "Sacul Aurebesh";
+        src:
+          local("Sacul Aurebesh"),
+          url("fonts/sacul/sacul-aurebesh.otf") format("opentype"),
+          url("fonts/sacul/sacul-aurebesh.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-family: "Womprat Aurebesh Demo";
+        src:
+          local("Womprat Aurebesh Demo"),
+          url("fonts/womprat/womprat-aurebesh-demo.otf") format("opentype"),
+          url("fonts/womprat/womprat-aurebesh-demo.woff2") format("woff2");
       }
     </style>
   </head>
   <body>
     <h1>Blaede Cantina</h1>
     <p>at Flanders Outpost</p>
+
+    <h2>Incoming transmission: Logistics</h2>
+    <p>Greetings traveler. As we approach the date of our rendezvous, please note the following:</p>
+
+    <h3>Plus One</h3>
+    <p>If it was not explicitly communicated previously, <strong>your invite is valid for you plus one</strong>. Feel free to bring a friend or loved one if they can stomach the nerdery—or if they can hold their own in Sabacc, of course.</p>
+
+    <h3>Refreshments</h3>
+    <p>Spotchka, revnog, and a small selection of ale and non-alcoholic drinks will be available for all guests. Light snacks and dessert will also be served. If there is a particular drink or snack you would prefer, feel free to bring it with you.</p>
+
+    <h3>Games</h3>
+    <p>Sabacc is often a gambling card game, but we’ll be playing for bragging rights more than anything. There’s no buy-in or betting involved. If you would like to brush up on the game before the party, you can <a href="https://www.gamesofthegalaxy.com/sabacc-app" target="_blank">play on your datapad.</a> Specifically, <strong>we will be playing Kessel Sabacc</strong>. Cards, shift tokens, and chips will be provided by the house.</p>
+
+    <h3>Attire</h3>
+    <p>Lastly, while these transmissions and the party environment itself may be fairly immersive, costumes are not expected. Dress however you feel comfortable for an indoor party with friends!</p>
   </body>
 </html>
