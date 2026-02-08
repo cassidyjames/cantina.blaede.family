@@ -6,8 +6,8 @@
     <title>Blaede Cantina</title>
     <meta name="fediverse:creator" content="@cassidy@blaede.family" />
     <meta name="author" content="Cassidy James Blaede" />
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <style>
       :root {
         color-scheme: dark;
@@ -41,6 +41,11 @@
       }
 
       html {
+        background-attachment: fixed;
+        background-image:
+          linear-gradient(to bottom, rgba(0 0 0 / 0.5), rgba(0 0 0 / 0.75)),
+          url("images/noise.svg");
+        background-size: 250px;
         margin: 0;
         padding: 0;
       }
@@ -61,6 +66,20 @@
       h1 {
         font-size: 4rem;
         line-height: 0.67;
+        position: relative;
+      }
+
+      h1::before {
+        color: var(--accent);
+        content: attr(alt);
+        font-family: "Womprat Aurebesh Demo";
+        font-size: 0.75em;
+        left: -0.5em;
+        line-height: 1;
+        opacity: 0.25;
+        position: absolute;
+        top: -0.5em;
+        z-index: -1;
       }
 
       h2 {
@@ -68,6 +87,23 @@
         color: var(--accent);
         margin-block-end: 1em;
         padding-top: 0.25em;
+      }
+
+      h3 {
+        position: relative;
+      }
+
+      h3::before {
+        color: var(--accent);
+        content: attr(alt);
+        font-family: "Womprat Aurebesh Demo";
+        font-size: 0.75em;
+        left: -0.5em;
+        line-height: 1;
+        opacity: 0.25;
+        position: absolute;
+        top: -0.5em;
+        z-index: -1;
       }
 
       p {
@@ -112,23 +148,23 @@
     </style>
   </head>
   <body>
-    <h1>Blaede Cantina</h1>
+    <h1 alt="Blaede Cantina">Blaede Cantina</h1>
     <p>at Flanders Outpost</p>
 
     <h2>Incoming transmission: Logistics</h2>
     <p>Greetings traveler. As we approach the date of our rendezvous, please note the following:</p>
 
-    <h3>Plus One</h3>
+    <h3 alt="Plus One">Plus One</h3>
     <p>If it was not explicitly communicated previously, <strong>your invite is valid for you plus one</strong>. Feel free to bring a friend or loved one if they can stomach the nerdery—or if they can hold their own in Sabacc, of course.</p>
 
-    <h3>Refreshments</h3>
+    <h3 alt="Refreshments">Refreshments</h3>
     <p>Spotchka, revnog, and a small selection of ale and non-alcoholic drinks will be available for all guests. Light snacks and dessert will also be served. If there is a particular drink or snack you would prefer, <strong>feel free to bring it with you</strong>.</p>
 
-    <h3>Games</h3>
+    <h3 alt="Games">Games</h3>
     <p>Sabacc is often a gambling card game, but we’ll be playing for bragging rights more than anything. There’s <strong>no buy-in or betting</strong> involved.</p>
     <p>If you would like to brush up on the game before the party, you can <a href="https://www.gamesofthegalaxy.com/sabacc-app" target="_blank">play on your datapad.</a> Specifically, <strong>we will be playing Kessel Sabacc</strong>. Cards, shift tokens, and chips will be provided by the house.</p>
 
-    <h3>Attire</h3>
+    <h3 alt="Attire">Attire</h3>
     <p>Lastly, while these transmissions and the party environment itself may be fairly immersive, <strong>costumes are not expected</strong>. Dress however you feel comfortable for an indoor party with friends!</p>
   </body>
 </html>
