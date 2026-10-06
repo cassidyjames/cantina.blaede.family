@@ -1,0 +1,11 @@
+title: Blaede Cantina
+description: Celebrating 34 years of scum and villainy
+author: Cassidy James
+theme-color: "#1cfbfd"
+card: /images/card.png
+domain: cantina.blaede.family
+markdown: kramdown
+plugins:
+- jekyll-feed
+- jekyll-redirect-from
+- jekyll-sitemap

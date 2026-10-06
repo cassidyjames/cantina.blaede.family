@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="en-us">
+  {% assign hash = site.time | date: '%s' %}
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="{{ site.theme-color }}" />
+    <meta property="og:type" content="website" />
+
+    <title>{% if page.title %}{{ page.title }} &sdot; {% endif %}{{ site.title }}</title>
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+    <meta property="og:image" content="{{ site.card | prepend: site.baseurl | prepend: site.url | append: '?v=' | append: hash }}" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="960" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ site.card | prepend: site.baseurl | prepend: site.url | append: '?v=' | append: hash }}">
+
+    <meta name="fediverse:creator" content="@cassidy@blaede.family" />
+    <meta name="author" content="Cassidy James Blaede" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="{{ 'style.css' | append: '?v=' | append: hash }}">
+
+  </head>
+  <body>
+    <nav>
+      <a href="/" class="current">Home</a>
+      <a href="/transmissions">Transmissions</a>
+    </nav>
+    <h1 alt="Blaede Cantina">Blaede Cantina</h1>
+<p>@ Flanders Outpost</p>
+    {{ content }}
+  </body>
+</html>
