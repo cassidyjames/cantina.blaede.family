@@ -75,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 4rem;
   line-height: 0.67;
+  margin-block-start: 1em;
   position: relative;
 }
 
