@@ -9,4 +9,4 @@ layout: default
 
 More often than annual. We promise.
 
-Email cantina@blaede.family for more info!
+Email [cantina@blaede.family](mailto:cantina@blaede.family?subject=Sabacc) for more info!
