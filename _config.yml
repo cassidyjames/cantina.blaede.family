@@ -3,9 +3,21 @@ description: Celebrating 34 years of scum and villainy
 author: Cassidy James
 theme-color: "#1cfbfd"
 card: /images/card.png
+
 domain: cantina.blaede.family
+baseurl: ""
+
 markdown: kramdown
+permalink: /:title
 plugins:
-- jekyll-feed
-- jekyll-redirect-from
-- jekyll-sitemap
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+exclude:
+  - fonts/**/*.md
+  - Gemfile
+  - Gemfile.lock
+  - NOTES.md
+  - README.md
+  - vendor/

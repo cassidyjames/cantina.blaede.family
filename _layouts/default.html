@@ -9,6 +9,7 @@ layout: default
     <meta charset="UTF-8">
     <meta name="theme-color" content="{{ site.theme-color }}" />
     <meta property="og:type" content="website" />
+    <link rel="canonical" content="{{ page.url | absolute_url }}" />
 
     <title>{% if page.title %}{{ page.title }} &sdot; {% endif %}{{ site.title }}</title>
     <meta property="og:site_name" content="{{ site.title }}" />
@@ -21,23 +22,41 @@ layout: default
     <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
     <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
-    <meta property="og:image" content="{{ site.card | prepend: site.baseurl | prepend: site.url | append: '?v=' | append: hash }}" />
+    <meta property="og:image" content="{{ site.card | absolute_url | append: '?v=' | append: hash }}" />
     <meta property="og:image:width" content="1920" />
     <meta property="og:image:height" content="960" />
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ site.card | prepend: site.baseurl | prepend: site.url | append: '?v=' | append: hash }}">
+    <meta name="twitter:image" content="{{ site.card | absolute_url | append: '?v=' | append: hash }}">
 
     <meta name="fediverse:creator" content="@cassidy@blaede.family" />
     <meta name="author" content="Cassidy James Blaede" />
+
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <link rel="stylesheet" href="{{ 'style.css' | append: '?v=' | append: hash }}">
-
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url | append: '?v=' | append: hash }}">
   </head>
   <body>
-    <nav>
-      <a href="/" class="current">Home</a>
-      <a href="/transmissions">Transmissions</a>
+    <nav>{% assign current = page.url | downcase | split: '/' %}
+      <!-- current: {{ current }} -->
+      <a href="/" {% if current[1] == null %} class='current' {% endif %}>Home</a>
+      <a href="/transmissions/" {% if current[1] == 'transmissions' %} class='current' {% endif %}>Transmissions</a>
+      {% for nav_page in site.pages %}
+        {% unless nav_page.hidden %}
+          {% unless nav_page.url == '/' %}
+            {% if nav_page.title %}
+              {% assign slug = nav_page.url | downcase | split: '/' %}
+              <a
+                href="{{ nav_page.url }}"
+                {% if current[1] == slug[1] %}
+                  class="current"
+                {% endif %}
+              >
+                {{ nav_page.title }}
+              </a>
+            {% endif %}
+          {% endunless %}
+        {% endunless %}
+      {% endfor %}
     </nav>
     <h1 alt="Blaede Cantina">Blaede Cantina</h1>
 <p>@ Flanders Outpost</p>
