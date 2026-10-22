@@ -55,14 +55,14 @@ nav a {
   color: var(--accent);
   text-decoration: none;
   opacity: 0.8;
-}
 
-nav a.current {
-  text-decoration: underline;
-}
+  &.current {
+    text-decoration: underline;
+  }
 
-nav a:hover {
-  opacity: 1;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -77,19 +77,27 @@ h1 {
   line-height: 0.67;
   margin-block-start: 1em;
   position: relative;
-}
 
-h1::before {
-  color: var(--accent);
-  content: attr(alt);
-  font-family: "Womprat Aurebesh Demo";
-  font-size: 0.75em;
-  left: -0.5em;
-  line-height: 1;
-  opacity: 0.25;
-  position: absolute;
-  top: -0.5em;
-  z-index: -1;
+  &::before {
+    color: var(--accent);
+    content: attr(alt);
+    font-family: "Womprat Aurebesh Demo";
+    font-size: 0.75em;
+    left: -0.5em;
+    line-height: 1;
+    opacity: 0.25;
+    position: absolute;
+    top: -0.5em;
+    z-index: -1;
+  }
+
+  & + p {
+    color: var(--accent);
+    font-family: "Spectre";
+    font-weight: normal;
+    margin: 0;
+    opacity: 0.5;
+  }
 }
 
 h2 {
@@ -101,30 +109,23 @@ h2 {
 
 h3 {
   position: relative;
-}
 
-h3::before {
-  color: var(--accent);
-  content: attr(alt);
-  font-family: "Womprat Aurebesh Demo";
-  font-size: 0.75em;
-  left: -0.5em;
-  line-height: 1;
-  opacity: 0.25;
-  position: absolute;
-  top: -0.5em;
-  z-index: -1;
+  &::before {
+    color: var(--accent);
+    content: attr(alt);
+    font-family: "Womprat Aurebesh Demo";
+    font-size: 0.75em;
+    left: -0.5em;
+    line-height: 1;
+    opacity: 0.25;
+    position: absolute;
+    top: -0.5em;
+    z-index: -1;
+  }
 }
 
 p {
   margin-block: 0.5em 1.33em;
-}
-
-h1 + p {
-  color: var(--accent);
-  font-family: "Spectre";
-  margin: 0;
-  opacity: 0.5;
 }
 
 strong {
