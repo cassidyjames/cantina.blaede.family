@@ -1,6 +1,7 @@
 ---
 title: Logistics
 ---
+
 Greetings traveler. As we approach the date of our rendezvous, please note the following:
 
 ### Plus One
