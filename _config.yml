@@ -14,6 +14,13 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
 
+defaults:
+  - scope:
+      type: posts
+    values:
+      layout: post
+      permalink: /transmissions/:year:month:day
+
 exclude:
   - fonts/**/*.md
   - Gemfile

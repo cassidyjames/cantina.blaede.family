@@ -2,10 +2,10 @@
 layout: default
 ---
 
-## Coming Soon
+## Sabacc Nights
 
-### Sabacc Nights
-{:alt="Sabacc Nights"}
+### Coming Soon
+{:alt="Coming Soon"}
 
 More often than annual. We promise. Join us at Launch Pad in Aurora on select nights!
 
