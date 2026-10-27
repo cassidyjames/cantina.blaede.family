@@ -2,6 +2,15 @@
 layout: default
 ---
 
+## Latest Transmission
+
+{% for post in posts limit:1 %}
+  {{ post.title }}
+  {% include transmission-title.html post=post %}
+{% endfor %}
+
+{% include transmission-title.html post=page %}
+
 ## Sabacc Nights
 
 ### Coming Soon
