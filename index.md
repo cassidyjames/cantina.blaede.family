@@ -4,12 +4,19 @@ layout: default
 
 ## Latest Transmission
 
-{% for post in posts limit:1 %}
-  {{ post.title }}
-  {% include transmission-title.html post=post %}
-{% endfor %}
+{% for post in site.posts limit:1 %}
 
-{% include transmission-title.html post=page %}
+{% capture title %}{% include transmission-title.html post=post %}{% endcapture %}
+### [{{ title | strip }}]({{ post.url }})
+{:alt="{{ title | strip }}"}
+
+<div class="preview">
+{{ post.content }}
+</div>
+
+[Read more →]({{ post.url }})
+
+{% endfor %}
 
 ## Sabacc Nights
 

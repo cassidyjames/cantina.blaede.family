@@ -153,6 +153,16 @@ img {
   max-width: 100%;
 }
 
+.preview {
+  --lines: 3;
+
+  display: -webkit-box;
+  -webkit-line-clamp: var(--lines);
+  -webkit-box-orient: vertical;
+  line-clamp: var(--lines);
+  overflow: hidden;
+}
+
 @font-face {
   font-family: "Spectre";
   src:
