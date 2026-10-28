@@ -2,6 +2,22 @@
 layout: default
 ---
 
+## Latest Transmission
+
+{% for post in site.posts limit:1 %}
+
+{% capture title %}{% include transmission-title.html post=post %}{% endcapture %}
+### [{{ title | strip }}]({{ post.url }})
+{:alt="{{ title | strip }}"}
+
+<div class="preview">
+{{ post.content }}
+</div>
+
+[Read more →]({{ post.url }})
+
+{% endfor %}
+
 ## Sabacc Nights
 
 ### Coming Soon
